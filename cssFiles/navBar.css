@@ -1,0 +1,61 @@
+:root {
+    --global-color-0: #075aae;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    max-width: 1225px;
+    width: 110%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+#logo {
+    max-width: 15rem;
+    margin: 0.9rem;
+}
+
+#navMenu {
+    display: block;
+    margin: 1rem;
+}
+
+.topbar,
+.topbar1 {
+    text-decoration: double;
+    font-size: 16.25px;
+    padding: 0.8rem;
+    color: black;
+}
+
+.topbar1,
+.topbar:hover {
+    color: var(--global-color-0);
+}
+
+@media screen and (max-width: 950px) {
+    nav {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #navMenu {
+        display: none;
+        margin: 0;
+    }
+    .topbar {
+        border-top: 1px solid rgb(210, 210, 210);
+    }
+    #navMenu.open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

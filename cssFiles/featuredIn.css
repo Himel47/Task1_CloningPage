@@ -1,0 +1,39 @@
+:root {
+    --global-color-0: #075aae;
+    --global-color-1: #067ae0;
+    --global-color-2: #f4f6f6;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+.featuredIn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background: var(--global-color-2);
+}
+
+.featuredIn div {
+    display: grid;
+    grid-template-columns: repeat(5, 0.75fr);
+    place-items: center;
+    margin: 1.75rem;
+}
+
+@media screen and (max-width: 900px) {
+    .featuredIn div {
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .featuredIn div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
